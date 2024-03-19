@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles_css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="weather-info-display" style="display: none">
+        <h1 class="city-name">Miami</h1>
+        <p class="temperature-display">95°F</p>
+        <p class="weather-emoji"></p>
+        <p class="humidity">Humidity: 45%</p>
+        <p class="desc-display">Clear Skies</p>
+        <p class="error-display">Please enter a city!</p>
+      </div>
+
+      <form class="weather-form">
+        <input class="cityInput" type="text" placeholder="Enter city..." />
+        <button type="submit">GET WEATHER</button>
+      </form>
+    </div>
+    <script src="Js/weatherapp.js"></script>
+  </body>
+</html>

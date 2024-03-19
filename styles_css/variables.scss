@@ -1,0 +1,22 @@
+@mixin centerContent {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin gradient-animation($animation-name) {
+  background: linear-gradient(
+    359deg,
+    $gradient-color-start,
+    $gradient-color-end
+  );
+  background-size: 400% 400%;
+  animation: $animation-name 12s ease infinite;
+}
+
+$gradient-color-start: #6ddef8;
+$gradient-color-end: #feec40;
+
+$mainGradient: linear-gradient(180deg, hsl(210, 100%, 75%), hsl(40, 100%, 66%));
+
+$mainFont: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

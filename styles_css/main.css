@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Work Sans";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background: linear-gradient(359deg, #6ddef8, #feec40);
+  background-size: 400% 400%;
+  -webkit-animation: bganimation 12s ease infinite;
+          animation: bganimation 12s ease infinite;
+}
+
+@-webkit-keyframes bganimation {
+  0% {
+    background-position: 49% 0%;
+  }
+  50% {
+    background-position: 52% 100%;
+  }
+  100% {
+    background-position: 49% 0%;
+  }
+}
+
+@keyframes bganimation {
+  0% {
+    background-position: 49% 0%;
+  }
+  50% {
+    background-position: 52% 100%;
+  }
+  100% {
+    background-position: 49% 0%;
+  }
+}
+.app-container {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 300px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  height: 600px;
+  border: 2px solid rgb(142, 142, 142);
+  border-radius: 15px;
+  -webkit-box-shadow: 3px 4px 24px -7px rgb(66, 68, 90);
+  box-shadow: 3px 4px 24px -7px rgb(66, 68, 90);
+  background: -webkit-gradient(linear, left top, left bottom, from(hsl(210, 100%, 75%)), to(hsl(40, 100%, 75%)));
+  background: linear-gradient(180deg, hsl(210, 100%, 75%), hsl(40, 100%, 75%));
+}
+.app-container .weather-info-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease; /* Smooth transition */
+}
+.app-container .weather-info-display .temperature-display,
+.app-container .weather-info-display .city-name {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: hsla(0, 0%, 0%, 0.75);
+  margin-bottom: 10px;
+}
+.app-container .weather-info-display .temperature-display {
+  margin-top: 0;
+}
+.app-container .weather-info-display .city-name {
+  margin-bottom: 15px;
+}
+.app-container .weather-info-display .humidity {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.app-container .weather-info-display .desc-display {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.app-container .weather-info-display p {
+  font-size: 1.5rem;
+  margin: 5px 0px;
+}
+.app-container .weather-info-display .weather-emoji {
+  margin: 0;
+  font-size: 2rem;
+}
+.app-container .weather-info-display img {
+  margin-top: 0px;
+  width: 30%;
+}
+.app-container .weather-info-display .error-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: hsla(0, 0%, 0%, 0.75);
+}
+.app-container .weather-info-display.hidden {
+  opacity: 0; /* Initially hide the weather info */
+  -webkit-transform: translateY(-28px);
+          transform: translateY(-28px); /* Move the weather info up */
+  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.app-container .weather-info-display.show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.app-container .weather-form {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.app-container .weather-form .cityInput {
+  padding: 10px;
+  width: 60%;
+  font-family: "Work Sans";
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+  background: -webkit-gradient(linear, left top, left bottom, from(hsl(210, 100%, 75%)), to(hsl(40, 100%, 66%)));
+  background: linear-gradient(180deg, hsl(210, 100%, 75%), hsl(40, 100%, 66%));
+}
+.app-container .weather-form .cityInput:focus {
+  border-color: #007bff;
+  -webkit-box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+          box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.app-container .weather-form .cityInput:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+.app-container .weather-form .cityInput::-webkit-input-placeholder {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #373737;
+}
+.app-container .weather-form .cityInput::-moz-placeholder {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #373737;
+}
+.app-container .weather-form .cityInput:-ms-input-placeholder {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #373737;
+}
+.app-container .weather-form .cityInput::-ms-input-placeholder {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #373737;
+}
+.app-container .weather-form .cityInput::placeholder {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #373737;
+}
+.app-container .weather-form button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-family: "Work Sans";
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, from(hsl(210, 100%, 75%)), to(hsl(40, 100%, 66%)));
+  background: linear-gradient(180deg, hsl(210, 100%, 75%), hsl(40, 100%, 66%));
+  font-size: 1.2rem; /* Increase font size for better readability */
+  border: none; /* Remove border for a cleaner look */
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; /* Add smooth transition effect */
+}
+.app-container .weather-form button:hover {
+  background-color: rgb(247, 255, 156);
+}
