@@ -30,7 +30,6 @@ body {
 .app-container {
   padding: 20px;
   display: flex;
-  min-width: 300px;
   flex-direction: column;
   width: 400px;
   height: 600px;
@@ -159,5 +158,12 @@ body {
     button:hover {
       background-color: rgb(247, 255, 156);
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app-container {
+    width: 300px;
+    height: 500px;
   }
 }

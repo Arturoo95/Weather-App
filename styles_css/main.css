@@ -55,7 +55,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 300px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -220,4 +219,11 @@ body {
 }
 .app-container .weather-form button:hover {
   background-color: rgb(247, 255, 156);
+}
+
+@media screen and (max-width: 600px) {
+  .app-container {
+    width: 300px;
+    height: 500px;
+  }
 }
